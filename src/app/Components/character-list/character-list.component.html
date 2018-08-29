@@ -1,0 +1,58 @@
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+    <mat-toolbar color="secondary">
+        <span><h2>Here Goes The Characters List!!</h2></span>
+      </mat-toolbar>
+</div>
+<div class="col-md-12">
+    <div class="row">
+  <table mat-table [dataSource]="response">
+
+   <!--- Note that these columns can be defined in any order.
+         The actual rendered columns are set as a property on the row definition" -->
+ 
+   <!-- Position Column -->
+   <!-- <ng-container matColumnDef="position">
+     <th mat-header-cell *matHeaderCellDef> No. </th>
+     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+   </ng-container> -->
+ 
+   <!-- Name Column -->
+   <ng-container matColumnDef="name">
+     <th mat-header-cell *matHeaderCellDef> Name </th>
+     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+   </ng-container>
+ 
+   <!-- Weight Column -->
+   <ng-container matColumnDef="dob">
+     <th mat-header-cell *matHeaderCellDef> dob </th>
+     <td mat-cell *matCellDef="let element"> {{element.dob}} </td>
+   </ng-container>
+ 
+   <!-- Symbol Column -->
+   <ng-container matColumnDef="gender">
+     <th mat-header-cell *matHeaderCellDef> gender </th>
+     <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+   </ng-container>
+ 
+   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+</div>
+</div>
+</div>
+  </div>
+
+
+<!--   
+  <mat-list>
+      <mat-list-item *ngFor="let character of response">
+        <h3 mat-line>Name:{{character.name}}</h3>
+        <p mat-line>Height: {{character.height}}</p>
+        <p mat-line>Gender: {{character.gender}}</p>
+        <p mat-line>DOB: {{character.dob}}</p>
+   </mat-list-item>
+   </mat-list>   
+   </div>  -->
+  

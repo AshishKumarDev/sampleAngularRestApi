@@ -1,0 +1,17 @@
+
+<mat-toolbar color="secondary">
+        <span><h2 style="color:darkred">Here Goes The Movies List!!</h2></span>
+      </mat-toolbar>
+      
+      <mat-list>
+          <mat-list-item *ngFor="let response of responses">
+            <h3 mat-line routerLink="/characters">Title:{{response.title}}</h3>
+            <p mat-line>Year: {{response.year}}</p>
+            <p mat-line ngSwitch="{{response.Director}}">Director: 
+                <span *ngSwitchCase="'Nolan'" [style.color]="'red'" >{{response.Director}}</span>
+                <span *ngSwitchCase="'Gus Van Sut'" [style.color]="'green'">{{response.Director}}</span>
+                <span *ngSwitchDefault>{{response.director}}</span></p>
+       </mat-list-item>
+       </mat-list>    
+      
+
